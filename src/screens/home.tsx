@@ -10,7 +10,7 @@ export default function Home() {
           <Station />
         </div>
         <div className={styles.station}>
-          <Station />
+          <Station isActive={true} />
         </div>
         <div className={styles.station}>
           <Station />

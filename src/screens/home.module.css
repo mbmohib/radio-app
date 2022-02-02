@@ -1,7 +1,7 @@
 .container {
   width: 650px;
   margin: auto;
-  height: 600px;
+  margin-top: var(--size1);
 }
 .stations {
   background: var(--base-color-700);

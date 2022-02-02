@@ -4,7 +4,7 @@ import Button from './button';
 
 test('render with Text', async () => {
   const buttonLabel = 'Click Me!';
-  render(<Button>Click Me!</Button>);
+  render(<Button>{buttonLabel}</Button>);
 
   expect(screen.getByRole('button')).toHaveTextContent(buttonLabel);
 });

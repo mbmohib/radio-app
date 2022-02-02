@@ -1,8 +1,8 @@
 .header {
   background: var(--primary-color);
   height: 150px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   border-radius: 32px 32px 0 0;
   color: var(--white);
@@ -12,7 +12,4 @@
   font-size: var(--font-md);
   text-transform: uppercase;
   text-align: center;
-}
-.actionSwitchArea {
-  margin-left: auto;
 }
