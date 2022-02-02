@@ -1,25 +1,18 @@
 .header {
-  background: #edad61;
-  height: 80px;
+  background: var(--primary-color);
+  height: 150px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   border-radius: 32px 32px 0 0;
+  color: var(--white);
+  padding: 0 var(--size4);
 }
 .content {
+  font-size: var(--font-md);
   text-transform: uppercase;
   text-align: center;
 }
-.actionBackAreaImage {
-  width: 16px;
-}
-.actionSwitchAreaImage {
-  width: 24px;
-}
-.actionBackArea {
-  padding-left: 8px;
-}
 .actionSwitchArea {
   margin-left: auto;
-  padding-right: 8px;
 }

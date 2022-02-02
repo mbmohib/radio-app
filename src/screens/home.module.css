@@ -1,5 +1,16 @@
 .container {
-  width: 400px;
+  width: 650px;
   margin: auto;
   height: 600px;
+}
+.stations {
+  background: var(--base-color-700);
+  padding: var(--size2) var(--size4);
+  border-bottom: 2px solid #3f3f47;
+}
+.station {
+  border-bottom: 1px solid var(--base-color-600);
+}
+.station:last-child {
+  border-bottom: 0;
 }

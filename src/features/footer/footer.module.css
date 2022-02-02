@@ -1,0 +1,18 @@
+.container {
+  background: #21212b;
+  text-align: center;
+  height: 156px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.label {
+  color: var(--primary-color);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: var(--font-sm);
+}
+.station {
+  font-size: var(--font-md);
+}

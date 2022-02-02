@@ -3,7 +3,8 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 
 import { worker } from './mocks/browser';
 import { Home } from './screens';
-import './styles/common.css';
+import './styles/global.css';
+import './styles/normalize.css';
 
 worker.start();
 

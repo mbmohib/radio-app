@@ -6,13 +6,9 @@ import styles from './header.module.css';
 export default function Header() {
   return (
     <div className={styles.header}>
-      <div className={styles.actionBackArea}>
+      <div>
         <Button>
-          <img
-            className={styles.actionBackAreaImage}
-            src={backImage}
-            alt="back button"
-          />
+          <img src={backImage} alt="back button" />
         </Button>
       </div>
       <div>
@@ -20,11 +16,7 @@ export default function Header() {
       </div>
       <div className={styles.actionSwitchArea}>
         <Button>
-          <img
-            className={styles.actionSwitchAreaImage}
-            src={switchImage}
-            alt="switch button"
-          />
+          <img src={switchImage} alt="switch button" />
         </Button>
       </div>
     </div>

@@ -1,0 +1,7 @@
+.container {
+  padding: var(--size2) 0;
+  color: #a2abbd;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-md);
+}
