@@ -1,0 +1,25 @@
+.header {
+  background: #edad61;
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  border-radius: 32px 32px 0 0;
+}
+.content {
+  text-transform: uppercase;
+  text-align: center;
+}
+.actionBackAreaImage {
+  width: 16px;
+}
+.actionSwitchAreaImage {
+  width: 24px;
+}
+.actionBackArea {
+  padding-left: 8px;
+}
+.actionSwitchArea {
+  margin-left: auto;
+  padding-right: 8px;
+}
