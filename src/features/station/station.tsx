@@ -1,9 +1,9 @@
 import styles from './station.module.css';
 
-interface StationProps {
+type StationProps = {
   name?: string;
   frequency?: string;
-}
+};
 
 export default function Station({ name, frequency }: StationProps) {
   return (
