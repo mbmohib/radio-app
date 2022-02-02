@@ -6,12 +6,13 @@
   --base-color-800: #21212b;
   --base-color-700: #2b2b35;
   --base-color-600: #43434c;
-  --font-sm: 22px;
-  --font-md: 44px;
-  --size1: 10px;
-  --size2: 20px;
-  --size3: 30px;
-  --size4: 40px;
+  --font-sm: 14px;
+  --font-md: 22px;
+  --size1: 8px;
+  --size2: 16px;
+  --size3: 24px;
+  --size4: 32px;
+  --size5: 40px;
 }
 * {
   box-sizing: border-box;
@@ -20,8 +21,17 @@
 body {
   background: var(--base-color-900);
   color: var(--primary-content-color);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 p {
   margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }

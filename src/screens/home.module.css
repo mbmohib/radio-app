@@ -1,11 +1,12 @@
 .container {
-  width: 650px;
+  width: 450px;
   margin: auto;
   margin-top: var(--size1);
+  filter: drop-shadow(0px 40px 52px rgba(0, 0, 0, 0.4));
 }
 .stations {
   background: var(--base-color-700);
-  padding: var(--size2) var(--size4);
+  padding: var(--size2) var(--size3);
   border-bottom: 2px solid #3f3f47;
 }
 .station {

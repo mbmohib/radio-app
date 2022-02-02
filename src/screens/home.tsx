@@ -15,6 +15,9 @@ export default function Home() {
         <div className={styles.station}>
           <Station />
         </div>
+        <div className={styles.station}>
+          <Station />
+        </div>
       </div>
       <Footer station="Putin FM" />
     </div>

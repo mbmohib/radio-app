@@ -1,11 +1,12 @@
 .container {
   background: #21212b;
   text-align: center;
-  height: 156px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: var(--size3) var(--size3);
+  border-radius: 0 0 var(--size3) var(--size3);
 }
 .label {
   color: var(--primary-color);

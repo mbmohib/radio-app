@@ -7,11 +7,11 @@ export default function Header() {
   return (
     <div className={styles.header}>
       <Button>
-        <img src={backImage} alt="back button" />
+        <img width={16} src={backImage} alt="back button" />
       </Button>
       <h2 className={styles.content}>stations</h2>
       <Button>
-        <img src={switchImage} alt="switch button" />
+        <img width={24} src={switchImage} alt="switch button" />
       </Button>
     </div>
   );
