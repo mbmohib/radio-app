@@ -6,11 +6,14 @@ import styles from './station.module.css';
 
 type StationProps = {
   name?: string;
-  frequency?: string;
+  station: Station;
   isActive?: boolean;
 };
 
-export default function Station({ name, frequency, isActive }: StationProps) {
+export default function Station({
+  station: { name, frequency },
+  isActive,
+}: StationProps) {
   return (
     <div className={styles.container}>
       {isActive && (
@@ -25,8 +28,8 @@ export default function Station({ name, frequency, isActive }: StationProps) {
         </div>
       )}
       <div className={styles.header}>
-        <p>Putin FM</p>
-        <p className={styles.frequency}>66.6</p>
+        <p>{name}</p>
+        <p className={styles.frequency}>{frequency}</p>
       </div>
     </div>
   );

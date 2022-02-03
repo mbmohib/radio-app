@@ -28,7 +28,7 @@ export const ItemTypes = {
 };
 
 export const maxImageSize = 3 * 1024 * 1024;
-export const apiEndpoint = process.env.REACT_APP_API;
+export const apiEndpoint = process.env.REACT_APP_API || 'http://localhost:3000';
 
 export const siteMenus = [
   {

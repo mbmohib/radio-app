@@ -2,11 +2,11 @@ import { useQuery } from 'react-query';
 
 import { useAxios } from '../hooks';
 
-export const useGetRadios = (slug: string | undefined) => {
+export const useGetRadios = () => {
   const axios = useAxios();
 
-  return useQuery<any, Error>(
-    ['radios', slug],
+  return useQuery<Station[], Error>(
+    'radios',
     async () => {
       const { data } = await axios.get(`/radios`);
 

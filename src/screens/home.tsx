@@ -1,24 +1,23 @@
+import { PreLoader } from '../components';
 import { Footer, Header, Station } from '../features';
+import { useGetRadios } from '../services/radio.api';
 import styles from './home.module.css';
 
 export default function Home() {
+  const { data, isLoading } = useGetRadios();
+
   return (
     <div className={styles.container}>
       <Header />
-      <div className={styles.stations}>
-        <div className={styles.station}>
-          <Station />
+      <PreLoader isLoading={isLoading}>
+        <div className={styles.stations}>
+          {data?.map(station => (
+            <div className={styles.station} key={station.id}>
+              <Station station={station} />
+            </div>
+          ))}
         </div>
-        <div className={styles.station}>
-          <Station isActive={true} />
-        </div>
-        <div className={styles.station}>
-          <Station />
-        </div>
-        <div className={styles.station}>
-          <Station />
-        </div>
-      </div>
+      </PreLoader>
       <Footer station="Putin FM" />
     </div>
   );
