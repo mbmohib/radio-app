@@ -1,7 +1,7 @@
 .container {
   font-size: var(--font-md);
   cursor: pointer;
-  padding: var(--size2) 0;
+  padding: var(--size3) 0;
 }
 .header {
   display: flex;

@@ -8,6 +8,11 @@
   background: var(--base-color-700);
   padding: var(--size2) var(--size3);
   border-bottom: 2px solid #3f3f47;
+  max-height: 450px;
+  overflow-y: scroll;
+}
+.stations::-webkit-scrollbar {
+  width: 0px;
 }
 .station {
   border-bottom: 1px solid var(--base-color-600);
