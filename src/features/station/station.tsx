@@ -26,7 +26,7 @@ export default function Station({ name, frequency, isActive }: StationProps) {
       )}
       <div className={styles.header}>
         <p>Putin FM</p>
-        <p>66.6</p>
+        <p className={styles.frequency}>66.6</p>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@
 }
 .content {
   font-size: var(--font-md);
+  font-weight: var(--font-bold);
   text-transform: uppercase;
   text-align: center;
 }

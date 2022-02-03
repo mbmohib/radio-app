@@ -8,6 +8,8 @@
   --base-color-600: #43434c;
   --font-sm: 14px;
   --font-md: 22px;
+  --font-medium: 400;
+  --font-bold: 700;
   --size1: 8px;
   --size2: 16px;
   --size3: 24px;
@@ -19,6 +21,8 @@
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: var(--font-medium);
   background: var(--base-color-900);
   color: var(--primary-content-color);
   display: flex;

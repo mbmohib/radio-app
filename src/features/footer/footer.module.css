@@ -13,6 +13,7 @@
   text-transform: uppercase;
   margin-bottom: 8px;
   font-size: var(--font-sm);
+  font-weight: var(--font-bold);
 }
 .station {
   font-size: var(--font-md);
