@@ -10,12 +10,15 @@ type StationProps = {
   name?: string;
   station: Station;
   isPlaying?: boolean;
+  handleCurrenPlaying: (station: Station) => void;
 };
 
 export default function Station({
-  station: { name, frequency },
+  station,
   isPlaying,
-}: StationProps) {
+  handleCurrenPlaying,
+}: StationProps & React.ComponentPropsWithoutRef<'button'>) {
+  const { name, frequency } = station;
   return (
     <div className={styles.container}>
       <AnimatePresence>
@@ -46,7 +49,13 @@ export default function Station({
           </motion.div>
         )}
       </AnimatePresence>
-      <motion.div className={styles.header}>
+      <motion.div
+        className={styles.header}
+        onClick={() => handleCurrenPlaying(station)}
+        tabIndex={0}
+        role="button"
+        onKeyPress={() => handleCurrenPlaying(station)}
+      >
         <p>{name}</p>
         <p className={styles.frequency}>{frequency}</p>
       </motion.div>

@@ -25,15 +25,9 @@ export default function Home() {
       <PreLoader isLoading={isLoading}>
         <div className={styles.stations}>
           {data?.map(station => (
-            <div
-              tabIndex={0}
-              role="button"
-              onKeyPress={() => handleCurrenPlaying(station)}
-              onClick={() => handleCurrenPlaying(station)}
-              className={styles.station}
-              key={station.id}
-            >
+            <div className={styles.station} key={station.id}>
               <Station
+                handleCurrenPlaying={() => handleCurrenPlaying(station)}
                 isPlaying={
                   currentlyPlaying && station.id === currentlyPlaying.id
                 }
