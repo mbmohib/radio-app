@@ -1,4 +1,4 @@
-export const radios: Station[] = [
+export const stations: Station[] = [
   {
     id: '01',
     name: 'Putin FM',
@@ -26,7 +26,7 @@ export const radios: Station[] = [
   },
 ];
 
-export const radio: Station = {
+export const station: Station = {
   id: '01',
   name: 'Putin FM',
   frequency: '66,6',

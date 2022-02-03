@@ -1,9 +1,9 @@
 import { ResponseComposition, RestContext, RestRequest } from 'msw';
 
-import { radios } from '../db/radio.db';
+import { stations } from '../db/radio.db';
 
 export const getRadios = (
   req: RestRequest,
   res: ResponseComposition,
   ctx: RestContext,
-) => res(ctx.status(200), ctx.json(radios));
+) => res(ctx.status(200), ctx.json(stations));

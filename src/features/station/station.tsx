@@ -10,13 +10,13 @@ type StationProps = {
   name?: string;
   station: Station;
   isPlaying?: boolean;
-  handleCurrenPlaying: (station: Station) => void;
+  handleCurrentPlaying: (station: Station) => void;
 };
 
 export default function Station({
   station,
   isPlaying,
-  handleCurrenPlaying,
+  handleCurrentPlaying,
 }: StationProps & React.ComponentPropsWithoutRef<'button'>) {
   const { name, frequency } = station;
   return (
@@ -35,7 +35,7 @@ export default function Station({
             transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
           >
             <Button>
-              <img width={24} src={minus} alt={name} />
+              <img width={24} src={minus} alt="minus button" />
             </Button>
             <motion.div
               variants={{ collapsed: { opacity: 0 }, open: { opacity: 1 } }}
@@ -44,17 +44,17 @@ export default function Station({
               <img className={styles.stationImg} src={stationImg} alt={name} />
             </motion.div>
             <Button>
-              <img width={24} src={plus} alt={name} />
+              <img width={24} src={plus} alt="plus button" />
             </Button>
           </motion.div>
         )}
       </AnimatePresence>
       <motion.div
         className={styles.header}
-        onClick={() => handleCurrenPlaying(station)}
+        onClick={() => handleCurrentPlaying(station)}
         tabIndex={0}
         role="button"
-        onKeyPress={() => handleCurrenPlaying(station)}
+        onKeyPress={() => handleCurrentPlaying(station)}
       >
         <p>{name}</p>
         <p className={styles.frequency}>{frequency}</p>

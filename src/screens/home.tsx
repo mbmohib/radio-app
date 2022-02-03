@@ -11,7 +11,7 @@ export default function Home() {
     Station | undefined
   >();
 
-  const handleCurrenPlaying = (station: Station) => {
+  const handleCurrentPlaying = (station: Station) => {
     if (currentlyPlaying && station.id === currentlyPlaying.id) {
       setCurrentlyPlaying(undefined);
     } else {
@@ -27,7 +27,7 @@ export default function Home() {
           {data?.map(station => (
             <div className={styles.station} key={station.id}>
               <Station
-                handleCurrenPlaying={() => handleCurrenPlaying(station)}
+                handleCurrentPlaying={() => handleCurrentPlaying(station)}
                 isPlaying={
                   currentlyPlaying && station.id === currentlyPlaying.id
                 }
