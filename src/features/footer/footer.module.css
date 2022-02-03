@@ -7,6 +7,7 @@
   flex-direction: column;
   padding: var(--size3) var(--size3);
   border-radius: 0 0 var(--size3) var(--size3);
+  height: 100px;
 }
 .label {
   color: var(--primary-color);

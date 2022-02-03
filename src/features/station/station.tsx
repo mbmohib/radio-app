@@ -7,16 +7,16 @@ import styles from './station.module.css';
 type StationProps = {
   name?: string;
   station: Station;
-  isActive?: boolean;
+  isPlaying?: boolean;
 };
 
 export default function Station({
   station: { name, frequency },
-  isActive,
+  isPlaying,
 }: StationProps) {
   return (
     <div className={styles.container}>
-      {isActive && (
+      {isPlaying && (
         <div className={styles.details}>
           <Button>
             <img width={24} src={minus} alt={name} />

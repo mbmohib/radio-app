@@ -1,14 +1,18 @@
 import styles from './footer.module.css';
 
 interface FooterProps {
-  station?: string;
+  stationName?: string;
 }
 
-export default function Footer({ station }: FooterProps) {
+export default function Footer({ stationName }: FooterProps) {
   return (
     <div className={styles.container}>
-      <p className={styles.label}>currently playing</p>
-      <p className={styles.station}>{station}</p>
+      {stationName && (
+        <>
+          <p className={styles.label}>currently playing</p>
+          <p className={styles.station}>{stationName}</p>
+        </>
+      )}
     </div>
   );
 }
