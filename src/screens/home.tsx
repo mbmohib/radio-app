@@ -11,6 +11,14 @@ export default function Home() {
     Station | undefined
   >();
 
+  const handleCurrenPlaying = (station: Station) => {
+    if (currentlyPlaying && station.id === currentlyPlaying.id) {
+      setCurrentlyPlaying(undefined);
+    } else {
+      setCurrentlyPlaying(station);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Header />
@@ -20,8 +28,8 @@ export default function Home() {
             <div
               tabIndex={0}
               role="button"
-              onKeyPress={() => setCurrentlyPlaying(station)}
-              onClick={() => setCurrentlyPlaying(station)}
+              onKeyPress={() => handleCurrenPlaying(station)}
+              onClick={() => handleCurrenPlaying(station)}
               className={styles.station}
               key={station.id}
             >

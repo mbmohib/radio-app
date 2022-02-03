@@ -17,7 +17,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--size4) 0;
 }
 .frequency {
   font-weight: var(--font-bold);
