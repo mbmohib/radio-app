@@ -1,14 +1,13 @@
 import { screen, waitFor } from '@testing-library/react';
-import { rest } from 'msw';
 
-import { radioRequestFailed } from '../mocks/api/station.mock.api';
 import { stations } from '../mocks/db/station.db';
 import { server } from '../mocks/server';
+import * as radioApi from '../services/radio.api';
 import { render } from '../utils/test';
 import Home from './home';
 
 beforeAll(() => {
-  server.listen({ onUnhandledRequest: 'error' });
+  server.listen();
 });
 afterAll(() => {
   server.close();
@@ -32,7 +31,10 @@ test('render home with stations data and loading state', async () => {
 });
 
 test('show error message if API request failed', async () => {
-  server.use(rest.get('/radios', radioRequestFailed));
+  // @ts-expect-error: Unreachable code error
+  jest.spyOn(radioApi, 'useGetRadios').mockImplementation(() => ({
+    isError: true,
+  }));
 
   render(<Home />);
 
