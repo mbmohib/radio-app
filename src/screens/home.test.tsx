@@ -30,7 +30,12 @@ test('render home with stations data and loading state', async () => {
   });
 });
 
-test('show error message if API request failed', async () => {
+test('show error message if API request failed', () => {
+  /*
+    TODO: figure out why msw js error code not working
+    server.use(rest.get('/radios', radioRequestFailed));
+  */
+
   // @ts-expect-error: Unreachable code error
   jest.spyOn(radioApi, 'useGetRadios').mockImplementation(() => ({
     isError: true,
@@ -38,7 +43,5 @@ test('show error message if API request failed', async () => {
 
   render(<Home />);
 
-  await waitFor(() => {
-    expect(screen.getByRole('alert')).toHaveTextContent(/unavailable/i);
-  });
+  expect(screen.getByRole('alert')).toHaveTextContent(/unavailable/i);
 });
