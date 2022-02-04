@@ -8,7 +8,7 @@ export const useGetRadios = () => {
   return useQuery<Station[], Error>(
     'radios',
     async () => {
-      const { data } = await axios.get(`/radios`);
+      const { data } = await axios.get(`/stations`);
 
       return data;
     },

@@ -1,6 +1,6 @@
 import { ResponseComposition, RestContext, RestRequest } from 'msw';
 
-import { stations } from '../db/radio.db';
+import { stations } from '../db/station.db';
 
 export const getRadios = (
   req: RestRequest,

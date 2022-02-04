@@ -3,4 +3,4 @@ import { rest } from 'msw';
 import { apiEndpoint } from '../config';
 import { getRadios } from './api';
 
-export default [rest.get(`${apiEndpoint}/radios`, getRadios)];
+export default [rest.get(`${apiEndpoint}/stations`, getRadios)];

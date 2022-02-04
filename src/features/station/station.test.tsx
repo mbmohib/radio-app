@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { station } from '../../mocks/db/radio.db';
+import { station } from '../../mocks/db/station.db';
 import Station from './station';
 
 test('render with station name and frequency', async () => {

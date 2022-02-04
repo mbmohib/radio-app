@@ -1,1 +1,1 @@
-export * from './radios.mock.api';
+export * from './station.mock.api';
