@@ -43,8 +43,8 @@ test('hide details if isPlaying false', async () => {
   );
 
   expect(screen.queryByAltText(station.name)).toBeNull();
-  expect(screen.queryByAltText('minus button')).toBeNull();
-  expect(screen.queryByAltText('plus button')).toBeNull();
+  expect(screen.queryByAltText(/minus/i)).toBeNull();
+  expect(screen.queryByAltText(/plus/i)).toBeNull();
 });
 
 test('fire handleCurrentPlaying function on click', async () => {
