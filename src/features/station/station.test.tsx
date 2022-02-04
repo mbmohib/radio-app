@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { station } from '../../mocks/db/station.db';
 import Station from './station';
 
-test('render with station name and frequency', async () => {
+test('render with station name and frequency', () => {
   const mockHandleCurrentPlaying = jest.fn();
   render(
     <Station
@@ -17,7 +17,7 @@ test('render with station name and frequency', async () => {
   expect(screen.getByText(station.frequency)).toBeInTheDocument();
 });
 
-test('show details if isPlaying true', async () => {
+test('show details if isPlaying true', () => {
   const mockHandleCurrentPlaying = jest.fn();
   render(
     <Station
@@ -32,7 +32,7 @@ test('show details if isPlaying true', async () => {
   expect(screen.getByAltText('plus button')).toBeInTheDocument();
 });
 
-test('hide details if isPlaying false', async () => {
+test('hide details if isPlaying false', () => {
   const mockHandleCurrentPlaying = jest.fn();
   render(
     <Station
@@ -47,7 +47,7 @@ test('hide details if isPlaying false', async () => {
   expect(screen.queryByAltText(/plus/i)).toBeNull();
 });
 
-test('fire handleCurrentPlaying function on click', async () => {
+test('fire handleCurrentPlaying function on click', () => {
   const mockHandleCurrentPlaying = jest.fn();
   render(
     <Station

@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import Header from './header';
 
-test('render header', async () => {
+test('render header', () => {
   render(<Header />);
 
   expect(screen.getByText('stations')).toBeInTheDocument();

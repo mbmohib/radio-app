@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import PreLoader from './pre-loader';
 
-test('show loading & hide children if isLoading true', async () => {
+test('show loading & hide children if isLoading true', () => {
   const text = 'render me!';
   render(<PreLoader isLoading={true}>{text}</PreLoader>);
 
@@ -10,7 +10,7 @@ test('show loading & hide children if isLoading true', async () => {
   expect(screen.queryByText(text)).toBeNull();
 });
 
-test('render children if isLoading false', async () => {
+test('render children if isLoading false', () => {
   const text = 'render me!';
   render(<PreLoader isLoading={false}>{text}</PreLoader>);
 
