@@ -8,7 +8,12 @@ type PreLoaderProps = {
 const PreLoader = ({ isLoading, children }: PreLoaderProps) => (
   <>
     {isLoading ? (
-      <div className={styles.container}>
+      <div
+        role="progressbar"
+        aria-valuetext="loading…"
+        aria-busy="true"
+        className={styles.container}
+      >
         <div className={styles.spinner}>
           <div></div>
           <div></div>
