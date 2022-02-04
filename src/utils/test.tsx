@@ -1,8 +1,4 @@
-import {
-  render as rtlRender,
-  screen as rtlScreen,
-} from '@testing-library/react';
-import fireEvent from '@testing-library/user-event';
+import { render as rtlRender } from '@testing-library/react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient({
@@ -32,6 +28,3 @@ export function createClientWrapper() {
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 }
-
-export const userEvent = fireEvent;
-export const screen = rtlScreen;

@@ -7,3 +7,10 @@ export const getRadios = (
   res: ResponseComposition,
   ctx: RestContext,
 ) => res(ctx.status(200), ctx.json(stations));
+
+export const radioRequestFailed = (
+  req: RestRequest,
+  res: ResponseComposition,
+  ctx: RestContext,
+) =>
+  res(ctx.status(500), ctx.json({ data: { error: 'Internal server error' } }));

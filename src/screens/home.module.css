@@ -20,3 +20,17 @@
 .station:last-child {
   border-bottom: 0;
 }
+.error {
+  background: var(--base-color-700);
+  padding: var(--size2) var(--size3);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.error p {
+  margin-bottom: var(--size2);
+  font-size: var(--font-md);
+  line-height: 1.3;
+}

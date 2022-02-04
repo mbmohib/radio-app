@@ -6,7 +6,7 @@ import { useGetRadios } from '../services/radio.api';
 import styles from './home.module.css';
 
 export default function Home() {
-  const { data, isLoading } = useGetRadios();
+  const { data, isLoading, isError } = useGetRadios();
   const [currentlyPlaying, setCurrentlyPlaying] = useState<
     Station | undefined
   >();
@@ -23,6 +23,12 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
       <PreLoader isLoading={isLoading}>
+        {isError && (
+          <div className={styles.error} role="alert">
+            <p>Sorry! </p>
+            <p>The service is unavailable! Please try again later.</p>
+          </div>
+        )}
         <div className={styles.stations}>
           {data?.map(station => (
             <div className={styles.station} key={station.id}>
