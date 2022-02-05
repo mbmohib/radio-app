@@ -11,6 +11,7 @@
 - MockJS
 - React Testing Library
 - TypeScript
+- Framer Motion
 
 ### Install & Run
 
