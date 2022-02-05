@@ -23,12 +23,6 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
       <PreLoader isLoading={isLoading}>
-        {isError && (
-          <div className={styles.error} role="alert">
-            <p>Sorry! </p>
-            <p>The service is unavailable! Please try again later.</p>
-          </div>
-        )}
         <div className={styles.stations}>
           {data?.map(station => (
             <div className={styles.station} key={station.id}>
@@ -42,6 +36,12 @@ export default function Home() {
             </div>
           ))}
         </div>
+        {isError && (
+          <div className={styles.error} role="alert">
+            <p>Sorry! </p>
+            <p>The service is unavailable! Please try again later.</p>
+          </div>
+        )}
       </PreLoader>
       <Footer stationName={currentlyPlaying?.name} />
     </div>

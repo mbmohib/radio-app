@@ -32,7 +32,7 @@ test('show details if isPlaying true', () => {
   expect(screen.getByAltText('plus button')).toBeInTheDocument();
 });
 
-test('hide details if isPlaying false', () => {
+test('hide details if isPlaying is false', () => {
   const mockHandleCurrentPlaying = jest.fn();
   render(
     <Station

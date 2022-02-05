@@ -7,7 +7,6 @@ import { Button } from '../../components';
 import styles from './station.module.css';
 
 type StationProps = {
-  name?: string;
   station: Station;
   isPlaying?: boolean;
   handleCurrentPlaying: (station: Station) => void;
@@ -17,7 +16,7 @@ export default function Station({
   station,
   isPlaying,
   handleCurrentPlaying,
-}: StationProps & React.ComponentPropsWithoutRef<'button'>) {
+}: StationProps) {
   const { name, frequency } = station;
   return (
     <div className={styles.container}>
@@ -51,9 +50,9 @@ export default function Station({
       </AnimatePresence>
       <motion.div
         className={styles.header}
-        onClick={() => handleCurrentPlaying(station)}
         tabIndex={0}
         role="button"
+        onClick={() => handleCurrentPlaying(station)}
         onKeyPress={() => handleCurrentPlaying(station)}
       >
         <p>{name}</p>
