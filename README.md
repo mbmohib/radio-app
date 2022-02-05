@@ -2,7 +2,7 @@
 
 ##### Radio app for assignment
 
-### Live URL:
+### Live URL: https://goofy-babbage-914925.netlify.app/
 
 ### Tech
 
