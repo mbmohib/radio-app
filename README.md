@@ -33,13 +33,13 @@ $ cd radio-app
 $ npm install
 ```
 
-3.  Finally run the app:
+4.  Finally run the app:
 
 ```bash
 $ npm start
 ```
 
-4.  Run test:
+5.  For Running test:
 
 ```bash
 $ npm run test
